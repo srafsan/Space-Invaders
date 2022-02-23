@@ -1,0 +1,19 @@
+ function ColisionHandler()
+ {
+	this.detectColisionBetweenObjects = function(obj1, obj2)
+	{
+ 		if((obj1.getPositionY() + obj1.height) < obj2.getPositionY()) {
+ 			return false;
+ 		}
+ 		else if(obj1.getPositionY() > (obj2.getPositionY() + obj2.height)) {
+ 			return false;
+ 		}
+ 		else if((obj1.getPositionX() + obj1.width) < obj2.getPositionX()) {
+ 			return false;
+ 		}
+ 		else if(obj1.getPositionX() > (obj2.getPositionX() + obj2.width)) {
+ 			return false;
+ 		}
+ 		return true;
+ 	}
+ }
